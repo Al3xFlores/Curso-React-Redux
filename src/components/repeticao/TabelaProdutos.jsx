@@ -1,38 +1,21 @@
-import React from 'react'
-import produtos from '../../data/produtos'
+import React from "react";
+import produtos from "../../data/produtos";
 
-
-
-const TabelaProdutos = () => {
-
- function getLinhas () {
-  return produtos.map(produto => {
+export default function TabelaProdutos() {
+ 
+  const listaProdutos = produtos.map(produto => {
    return (
-    <tr>
-     <td>{produto.id}</td>
-     <td>{produto.nome}</td>
-     <td> R$ {produto.preco}</td>
-    </tr>
+    <li> 
+     {produto.id} - {produto.nome} - {produto.preco}
+    </li>
    )
   })
- }
-
- return (
-  <div>
-   <table border='1'>
-    <thead>
-     <tr>
-      <th>ID</th>
-      <th>Nome</th>
-      <th>Preco</th>
-     </tr>
-    </thead>
-    <tbody>
-     {getLinhas()}
-    </tbody>
-   </table>
-  </div>
- )
+     
+  return (
+    <div>
+      <ul>
+        <li>{listaProdutos}</li>
+      </ul>
+    </div>
+  );
 }
-
-export default TabelaProdutos

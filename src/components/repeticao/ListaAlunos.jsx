@@ -1,19 +1,24 @@
 import React from 'react'
 import alunos from '../../data/alunos'
 
-const alunosJSX = alunos.map(aluno => {
- return (
-  <li key={aluno.id}>
-   {aluno.id}) {aluno.nome}  {aluno.nota}
-  </li>
- );
-})
+
 
 const ListaAlunos = () => {
+
+
+ const lis = alunos.map(aluno =>{
+  return (
+   <li key={aluno.id}>
+   {aluno.id} - {aluno.nome} - {aluno.nota}
+   </li>
+  )
+ 
+ })
+
  return (
   <div>
    <ul>
-    <li>{alunosJSX}</li>
+    <li>{ lis }</li>
    </ul>
   </div>
  )

@@ -7,10 +7,9 @@ import { cloneElement } from 'react/cjs/react.production.min'
 const Familia = (props) => {
  return (
   <div>
-   { React.Children.map(props.children, child => {
-    return cloneElement(child, props)
-   })
-   }
+   { props.children.map((child) => {
+    return cloneElement(child, {...props})
+   })}
   </div>
  )
 }
