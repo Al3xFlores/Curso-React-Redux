@@ -2,11 +2,11 @@ import React from 'react'
 
 const ParOuImpar = (props) => {
 
- const IsPar = props.numero % 2 === 0 //Verifica se o numero é par
+ const isPar = props.numero % 2 === 0 
 
  return (
   <div> 
-   { IsPar ? <span>Par</span> :  <span>Impar</span> } 
+   { isPar ? <span>Par</span> : <span>Impar</span>}
   </div>
  )
 }

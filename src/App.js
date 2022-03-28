@@ -10,7 +10,8 @@ import FamiliaMembro from './components/basicos/FamiliaMembro';
 import ListaAlunos from './components/repeticao/ListaAlunos';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar';
-import UsuarioInfo from './components/condicional/UsuarioInfo';
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
 
 
 
@@ -20,9 +21,17 @@ function App() {
       <div className='Cards'>
 
 
+        <Card titulo='#10 - Comunicação Indireta' color='#8BAD39'>
+          <IndiretaPai />
+        </Card>
+
+        <Card titulo='#09 - Comunicação direto' color='#593223C'>
+          <DiretaPai />
+        </Card>
+
         <Card titulo='Renderização condicional' color='#982395'>
-        <ParOuImpar numero={9} />
-        <UsuarioInfo usuario={ {nome: 'Fernando' }}/>
+         <ParOuImpar numero={5}>
+         </ParOuImpar>
         </Card>
 
         <Card titulo='Tabela Produtos/repetição' color='#FF432E'>
