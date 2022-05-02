@@ -12,7 +12,7 @@ import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar';
 import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
-
+import Input from './components/formulario/input';
 
 
 function App() {
@@ -20,6 +20,10 @@ function App() {
     <div>
       <div className='Cards'>
 
+
+        <Card titulo='#11 - Componente controlado' color='#8BAD35'>
+          <Input />
+        </Card>
 
         <Card titulo='#10 - Comunicação Indireta' color='#8BAD39'>
           <IndiretaPai />
